@@ -1,17 +1,219 @@
-.foot-panel4 {
-    background-color: #0F1111;
-    color: white;
-    height: 70px;
-    font-size: 0.7rem;
+index 5d6c3e2..e9b1f4a 100644
+/* -------------------------------------------------
+   Amazon‑style UI – Complete stylesheet
+   ------------------------------------------------- */
+
+/* Global resets and typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #EAEDED;
+    color: #0F1111;
+    line-height: 1.5;
+}
+
+/* -------------------- Header / Navbar -------------------- */
+header {
+    background-color: #131921;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    height: 60px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.nav-logo .logo {
+    background-image: url("amazon_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 30px;
+}
+
+.nav-search {
+    flex: 1;
+    display: flex;
+    margin: 0 1rem;
+}
+
+.nav-search input {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    font-size: 1rem;
+}
+
+.nav-search button {
+    background-color: #febd69;
+    border: none;
+    padding: 0 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav-cart {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-cart i {
+    font-size: 1.5rem;
+    margin-right: 0.3rem;
+}
+
+.nav-cart .mycart {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* -------------------- Hero Section -------------------- */
+.hero-section {
+    background-color: #232F3E;
+    color: #FFFFFF;
+    padding: 2rem 1rem;
     text-align: center;
 }
 
-/* Added button style for orange background */
-button,
-.btn {
-    background-color: #FFA500 !important;
-    color: white;
+.hero-section .hero-msg p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-.pages {
-    padding:
+.hero-section .hero-msg a {
+    color: #febd69;
+    text-decoration: underline;
+}
+
+/* -------------------- Product Boxes -------------------- */
+.box {
+    background-color: #FFFFFF;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 1rem;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+}
+
+.box-content {
+    padding: 0.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box-content h3 {
+    font-size: 1rem;
+    color: #0F1111;
+    margin-bottom: 0.3rem;
+}
+
+.box-content p {
+    font-size: 0.9rem;
+    color: #007585;
+    margin-bottom: 0.5rem;
+}
+
+.box-content .price {
+    font-weight: bold;
+    color: #B12704;
+    margin-top: auto;
+}
+
+/* -------------------- Footer Panels -------------------- */
+footer {
+    margin-top: 2rem;
+    background-color: #131921;
+    color: #FFFFFF;
+    font-size: 0.85rem;
+}
+
+.foot-panel1,
+.foot-panel2,
+.foot-panel3,
+.foot-panel4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.foot-panel1 {
+    background-color: #37475a;
+    height: 50px;
+}
+
+.foot-panel2 {
+    background-color: #232F3E;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.foot-panel2 a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-size: 0.8rem;
+}
+
+.foot-panel3 {
+    background-color: #131921;
+    flex-direction: column;
+    text-align: center;
+}
+
+.foot-panel3 p {
+    margin: 0.3rem 0;
+}
+
+.foot-panel4 {
+    background-color: #0F1111;
+    height: 70px;
+    font-size: 0.7rem;
+    text-align: center;
+    line-height: 70px;
+}
+
+/* -------------------- Responsive Design -------------------- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 0.5rem;
+    }
+
+    .nav-search {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .box {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .foot-panel2 {
+        justify-content: center;
+    }
+}
+
+/* End of Amazon‑style stylesheet */
